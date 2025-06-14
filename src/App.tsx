@@ -7,7 +7,7 @@ import QuizModal from "./components/QuizModal.tsx";
 import QuizFeedback from "./components/QuizFeedback.tsx";
 
 import {QuizGET, QuizLIST} from './mock-data/quiz.ts'
-import type {Quiz} from "./data/quiz.ts";
+import type {ChoiceQuiz, ShortAnswerQuiz} from "./data/quiz.ts";
 
 function App() {
   const [feedbackState, setFeedbackState] = useState({
@@ -16,7 +16,7 @@ function App() {
   })
   const [modalState, setModalState] = useState({
     open: false,
-    quiz: undefined as unknown as Quiz
+    quiz: undefined as unknown as ChoiceQuiz | ShortAnswerQuiz
   })
 
   const handleModalClose = () => {
